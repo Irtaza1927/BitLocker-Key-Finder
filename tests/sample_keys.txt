@@ -1,0 +1,66 @@
+================================================================
+  BitLocker Key Finder — Demonstration Test Data
+  FAST-NUCES | Digital Forensics | Semester 6
+================================================================
+
+Place this folder as the scan target. The scanner will produce
+a deterministic, verifiable result set that demonstrates every
+fix in this revision:
+
+  (a) mod-11 validation             → separates VALID from PATTERN-ONLY
+  (b) multi-key / multi-ID pairing  → closest-offset matching
+  (c) size filter                   → huge.txt should be excluded
+                                      when "Max Size" < its size
+  (d) extension filter              → unchecked exts must not appear
+  (e) fresh report timestamp        → two consecutive scans produce
+                                      two distinct CSV/PDF filenames
+
+----------------------------------------------------------------
+  Sample 1 — GENUINE BitLocker recovery-key format
+  (each 6-digit group is divisible by 11, quotient ≤ 0xFFFF)
+----------------------------------------------------------------
+Identifier : A1B2C3D4-E5F6-7890-ABCD-EF1234567890
+Recovery   : 258016-135795-502458-074679-380237-122221-244442-720885
+
+Expected output row  →  Validation = "Valid (mod-11)"
+
+----------------------------------------------------------------
+  Sample 2 — Second GENUINE key (multi-key test)
+----------------------------------------------------------------
+Identifier : 11111111-2222-3333-4444-555555555555
+Recovery   : 122221-244442-366663-488884-611105-155551-277772-399993
+
+Expected output row  →  Validation = "Valid (mod-11)",
+                        ID correctly paired (NOT the Sample-1 ID)
+
+----------------------------------------------------------------
+  Sample 3 — README DECOY KEY
+  (pattern matches regex but FAILS mod-11 — this is the
+   old-README "fake key", which is NOT a real BitLocker key)
+----------------------------------------------------------------
+Identifier : DEADBEEF-0000-0000-0000-111111111111
+Recovery   : 123456-654321-111111-222222-333333-444444-555555-666666
+
+Expected output row  →  Validation = "Pattern-only"  (amber highlight)
+
+----------------------------------------------------------------
+  Sample 4 — Near-miss (fails mod-11 at last block only)
+----------------------------------------------------------------
+Identifier : 99999999-8888-7777-6666-555555555555
+Recovery   : 258016-135795-502458-074679-380237-122221-244442-720886
+
+Expected output row  →  Validation = "Pattern-only"
+                        (720886 % 11 = 10, fails)
+
+================================================================
+  How to generate additional valid test keys
+================================================================
+Any 6-digit block B is a valid BitLocker block iff:
+      B % 11 == 0                   AND
+      B // 11 <= 65535  (0xFFFF)
+
+Python one-liner:
+    >>> import random
+    >>> "-".join(f"{11*random.randint(0,65535):06d}" for _ in range(8))
+
+================================================================
