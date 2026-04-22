@@ -25,7 +25,7 @@
 | **Part A: Live RAM Extraction** | Active System | 2-5 min | Running system analysis |
 | **Part B: Partition Scanning** | Offline/Storage | 5-30 min | Comprehensive disk carving |
 
-BitLocker is Microsoft's full-disk encryption technology protecting sensitive data through encryption. When investigators encounter encrypted drives, they require tools to extract recovery keys—48-digit codes that serve as backup access mechanisms. This tool addresses that critical forensic need.
+BitLocker is Microsoft's full-disk encryption technology protecting sensitive data through encryption. When investigators encounter encrypted drives, they require tools to extract recovery keys-48-digit codes that serve as backup access mechanisms. This tool addresses that critical forensic need.
 
 ---
 
