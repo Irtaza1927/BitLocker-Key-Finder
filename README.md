@@ -9,7 +9,6 @@
 
 **Professional Digital Forensics Tool for BitLocker Recovery Key Extraction**
 
-[Features](#features) • [Installation](#installation) • [Usage](#usage) • [Platform Compatibility](#platform-compatibility) • [Troubleshooting](#troubleshooting) • [Legal Notice](#legal-notice)
 
 </div>
 
