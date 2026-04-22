@@ -649,8 +649,7 @@ A: Only with **explicit authorization** from the owner, law enforcement, or cour
 
 1. **Read Documentation:**
    - README.md (this file)
-   - USER_GUIDE.md (usage guide)
-   - TECHNICAL_DOCS.md (technical details)
+
 
 2. **Check Troubleshooting:**
    - Common issues and solutions
