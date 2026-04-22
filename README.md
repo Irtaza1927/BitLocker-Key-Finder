@@ -570,10 +570,10 @@ This tool is provided "AS IS" without warranty. Users are responsible for:
 
 | Member | Roll # | Contribution |
 |--------|--------|--------------|
-| Irtaza Zahid | 23i-2096 | Live RAM Extraction Engine |
-| Muhammad Ammar Shahid | 23I-2125 | Partition Scanning & Data Carving |
-| Usman Khan | 23I-2069 | User Interface (Part A) |
-| Shaheer Shaban | 23I-2040 | Main Menu & Core Systems |
+| Irtaza Zahid | 23i-2096 | Live RAM Extraction Engine, mod-11 validation, partition scan, GUI |
+| Muhammad Ammar Shahid | 23I-2125 | Partition scanning, data carving, file extension filters |
+| Usman Khan | 23I-2069 | Load dump file, browse dialogs, export to text |
+| Shaheer Shaban | 23I-2040 | Console output, testing |
 
 ### Institution
 
