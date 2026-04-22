@@ -708,9 +708,9 @@ python main.py
 
 *Professional Digital Forensics Tool for BitLocker Recovery Key Extraction*
 
-Made with ❤️ by FAST-NUCES Islamabad Digital Forensics Team
+Made with ❤️ by Irtaza Zahid, Ammar Shahid, Usman Khan, Shaheer Shaban | FAST-NUCES Islamabad
 
-[⭐ Star on GitHub](https://github.com/Irtaza1927/BitLocker-Key-Finder) • [📖 Read Docs](#) • [🐛 Report Issues](https://github.com/Irtaza1927/BitLocker-Key-Finder/issues)
+[⭐ Star on GitHub](https://github.com/Irtaza1927/BitLocker-Key-Finder) • [🐛 Report Issues](https://github.com/Irtaza1927/BitLocker-Key-Finder/issues)
 
 ---
 
